@@ -1,0 +1,8 @@
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle theme-dark" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Select a game
+    </button>
+    <div class="dropdown-menu theme-dark" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" *ngFor="let game of games" (click)="onSelect(game)">{{game.title}}</a>
+    </div>
+  </div>

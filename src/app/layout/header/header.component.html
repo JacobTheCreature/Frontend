@@ -1,0 +1,13 @@
+<nav class="wrapperHeader">
+    <div class="column">
+        <a class="title navbar-title" href="">Cool Games</a>
+    </div> 
+    <div class="nav-item">
+        <div class="button-group">
+            <button class="nav-button" id="add">Add Game</button>
+            <button class="nav-button" id="edit">Edit Game</button>
+            <button class="nav-button" id="delete">Delete Game</button>
+        </div>
+        <app-dropdown (gameSelected)="onGameSelected($event)"></app-dropdown>
+    </div>
+</nav>

@@ -1,0 +1,6 @@
+<div class="game-frame">
+  <h2>{{gameService.selectedGame?.title}}</h2>
+  <nav class="game-window row">
+    <iframe [src]="getSanitizedUrl(gameService.selectedGame?.url)" frameBorder="0"></iframe>
+  </nav>
+</div>
