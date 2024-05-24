@@ -3,6 +3,7 @@
       Select a game
     </button>
     <div class="dropdown-menu theme-dark" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" *ngFor="let game of games" (click)="onSelect(game)">{{game.title}}</a>
+      <input class="dropdown-item search-bar" type="text" placeholder="Search.." id="myInput" [(ngModel)]="searchInput" (keyup)="filter()">
+      <a class="dropdown-item" routerLink='/game-frame' routerLinkActive='active' *ngFor="let game of filteredList" (click)="onSelect(game)">{{game.title}}</a>
     </div>
   </div>

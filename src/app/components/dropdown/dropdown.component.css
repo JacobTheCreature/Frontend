@@ -6,7 +6,17 @@
 .dropdown-item{
     color: white;
     cursor: pointer;
+    background-color: #9171f8;
 }
 .dropdown-item:hover {
     background-color: #a688fa;
+}
+
+.search-bar {
+    background-color: #ba9ffb;
+    color: white;
+}
+
+a {
+    text-decoration: none;
 }
