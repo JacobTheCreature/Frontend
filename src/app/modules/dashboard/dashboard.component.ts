@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule, NgFor],
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']  // Fix styleUrls typo
+  styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
 
@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
     this.gameService.getGames()
       .subscribe(games => {
         this.games = games;
-        this.filteredList = games; // Initialize filteredList to the full list of games
+        this.filteredList = games;
       });
   }
 
@@ -53,13 +53,13 @@ export class DashboardComponent implements OnInit {
   }
 
   isTitleLong(title: string): boolean {
-    return title.length > 20; // Adjust the threshold as needed
+    return title.length > 20;
   }
 
   ngOnInit(): void {
     this.gameService.getGames().subscribe(games => {
       this.games = games;
-      this.filteredList = games; // Ensure filteredList is initialized with games
+      this.filteredList = games;
     });
     this.gameUpdateService.gameUpdate$.subscribe(() => {
       this.updateDashboard();
